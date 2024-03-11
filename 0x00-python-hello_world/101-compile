@@ -1,2 +1,2 @@
 #!/bin/bash
-pytthon3 -m compileal -b $PYFILEi
+pytthon3 -m compileall i-b $PYFILEi
