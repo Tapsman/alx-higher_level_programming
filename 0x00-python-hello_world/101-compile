@@ -1,0 +1,2 @@
+#!/bin/bash
+pytthon3 -m compileal -b $PYFILEi
