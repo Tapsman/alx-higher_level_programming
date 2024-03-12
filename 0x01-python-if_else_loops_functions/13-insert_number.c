@@ -13,7 +13,7 @@ listint_t *insert_node(listint_t **head, int number)
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-	new-> = number;
+	new->n = number;
 
 	if (node == NULL || node->n >= number)
 	{
