@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""A program that does some maths and prints the result."""
 if __name__ == "__main__":
-
+    """Prrint the sum, differences, multiple and the quotient of 10 and 5."""
     from calculator_1 import add, sub, mul, div
 
     a = 10
