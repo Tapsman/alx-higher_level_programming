@@ -20,33 +20,33 @@ void reverse_listint(listint_t **head)
 	}
 
 	*head = prev;
-
+}
 /**
- * is_palindrome - A function that checks f the written linked list is
- * a linked list
+ * is_palindrome - A function in C that checks if a singly linked
+ * list is a palindrome
  * @head: The pointer to the linked list
  * Return: 1 if it is a palindrome, 0 if it is not one
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, rapid = *head, temp = *head, *dup = NULL;
+	listint_t *steady = *head, *rapid = *head, *temp = *head, *dup = NULL;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	while(1)
+	while (1)
 	{
 		rapid = rapid->next->next;
 		if (!rapid)
 		{
-			dup = slow->next;
+			dup = steady->next;
 			break;
 		}
 		if (!rapid->next)
 		{
-			dup = slow->next->next;
+			dup = steady->next->next;
 			break;
 		}
-		slow = slow->next;
+		steady = steady->next;
 	}
 
 	reverse_listint(&dup);
