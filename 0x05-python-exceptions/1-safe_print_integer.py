@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def saf_print_integer(value):
+def safe_print_integer(value):
     """A function to print an integer with "{:d}.format.
 
     Args:
