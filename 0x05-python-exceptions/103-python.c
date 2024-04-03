@@ -1,11 +1,10 @@
-#include <python.h>
 #include <stdio.h>
-
+#include <Python.h>
 /**
  * print_python_float - Function to give data of PyFloatObject
  * @p: The PyObject
  */
-void print_python_list(PyObject *p)
+void print_python_float(PyObject *p)
 {
 	double value = 0;
 	char *string = NULL;
@@ -50,3 +49,34 @@ void print_python_bytes(PyObject *p)
 	printf("\n");
 }
 
+/**
+ * print_python_list - The function gives the data of the PyListObject.
+ * @p: Is the PyObject
+ */
+void print_python_list(PyObject *p)
+{
+	Py_ssize_t size = 0;
+	PyObject *item;
+	int i = 0;
+
+	fflush(stdout);
+	printf("[*] Python list info\n");
+	if (PyList_CheckExact(p))
+	{
+		size = PyList_GET_SIZE(p);
+		printf("[*] Size of Python List = %zd\n", size);
+		printf("[*] Allocated = %lu\n", ((PyListObject *)p)->allocated);
+		while (i < size)
+		{
+			item = PyList_GET_ITEM(p, i);
+			printf("Element %d: %s\n", i, item->ob_type->tp_name);
+			if (PyBytes_Check(item))
+				print_python_bytes(item);
+			else if (PyFloat_Check(item))
+				print_python_float(item);
+			i++;
+		}
+	}
+	else
+		printf(" [Error] Invalid List Object\n");
+}
