@@ -71,7 +71,7 @@ class Rectangle:
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -79,7 +79,7 @@ class Rectangle:
     def __repr__(self):
         """Returns the string representation of the rectangle."""
         rect = "Rectangle(" + str(self.__width)
-        rect = rect + ", " + str(self.__height) + ")"
+        rect += ", " + str(self.__height) + ")"
         return (rect)
 
     def __del__(self):
