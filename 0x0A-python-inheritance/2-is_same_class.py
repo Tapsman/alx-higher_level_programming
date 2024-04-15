@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This is the module for is_same_close meth."""
+"""This is the module for is_same_class meth."""
 
 
 def is_same_class(obj, a_class):
