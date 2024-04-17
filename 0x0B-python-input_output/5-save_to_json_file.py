@@ -5,4 +5,5 @@ import json
 
 def save_to_json_file(my_obj, filename):
     """Funct to write and object to text file using JSON repreentation."""
-    with open(filename, :w:) as f:
+    with open(filename, "w") as f:
+        json.dump(my_obj, f)
