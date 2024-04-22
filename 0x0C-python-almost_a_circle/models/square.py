@@ -23,7 +23,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         self.width = value
-        size.height = value
+        self.height = value
 
     def __update(self, id=None, size=None, x=None, y=None):
         """Internal mothod that updates instance attributes via */**args."""
