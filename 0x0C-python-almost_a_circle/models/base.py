@@ -44,7 +44,7 @@ class Base:
     def create(cls, **dictionary):
         """Function that loads instance from a dictionary."""
         from models.rectangle import Rectangle
-        from models.square import square
+        from models.square import Square
         if cls is Rectangle:
             new = Rectangle(1, 1)
         elif cls is Square:
