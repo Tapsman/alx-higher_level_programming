@@ -6,7 +6,7 @@ from models.base import Base
 class Rectangle(Base):
     """Rectangle class."""
 
-    def __init__(slef, width, height, x=0, y=0, id=None):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """The constructer."""
         super().__init__(id)
         self.width = width
@@ -75,7 +75,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns string information about rectangle."""
-        return [{}]({}) {}/{} - {}/{}.\
+        return '[{}]({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width)
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
