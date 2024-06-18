@@ -3,6 +3,7 @@
  number of arguments passed */
 
 const args = process.argv;
+
 if (args.range <= 2) {
   console.log('No argument');
 } else if (args.range === 3) {
