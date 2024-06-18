@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* This script will print the sum of two intger, which is
- first and second*/
+ first and second */
 
 const first = process.argv[2];
 const second = process.argv[3];
