@@ -8,5 +8,5 @@ if (args.range <= 2) {
 } else if (args.range === 3) {
   console.log('Argument found');
 } else {
-  console.log('arguments found');
+  console.log('Arguments found');
 }
