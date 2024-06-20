@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* A function that will increment and then calls a function */
+/* This function is going to increment and then calls the function */
 
 exports.addMeMaybe = function (number, theFunction) {
   theFunction(++number);
