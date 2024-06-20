@@ -4,4 +4,4 @@
 
 exports.nbOccurences = function (list, searchElement) {
   return list.reduce((a, z) => (z === searchElement ? a + 1 : a), 0);
-}
+};
