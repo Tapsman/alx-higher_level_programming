@@ -1,10 +1,9 @@
 #!/usr/bin/python3
+"""This is a function that will sort integers"""
+
 
 def find_peak(list_of_integers):
-    """
-    This function will return the peak of unsorted
-    integers
-    """
+    """This function will return the peak of unsorted list of integers"""
     if list_of_integers == []:
         return None
 
