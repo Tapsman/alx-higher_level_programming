@@ -7,5 +7,5 @@ import sys
 
 if __name__ == "__main__":
     auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
-    read = requests.get("https://api.github.com/Tapsman", auth=auth)
+    read = requests.get("https://api.github.com/user", auth=auth)
     print(read.json().get("id"))
