@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+import sys
+import urllib.request
 """
 This is a python script that will:
     - Take in the URL
@@ -6,8 +8,6 @@ This is a python script that will:
     - And then displays the value of the X-Request-ID
     - Of the variable that is found on the header of the response
 """
-import sys
-import urllib.request
 
 if __name__ == "__main__":
     url = sys.argv[1]
