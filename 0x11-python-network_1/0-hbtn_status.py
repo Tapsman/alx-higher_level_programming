@@ -1,16 +1,17 @@
 #!/usr/bin/python3
+import urllib
+import urllib.request
 """
 - This is a python script that is going to fetch a
 - https://alx-intranet.hbtn.io/status
 - It then uses a with statement
-- Using the urlib package
+- Using the urllib package
 """
 
 
 if __name__ == "__main__":
-    import urlib.request
 
-    with urlib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
         content = res.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
