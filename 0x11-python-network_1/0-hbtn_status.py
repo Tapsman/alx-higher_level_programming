@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import urlib.request
 """
 - This is a python script that is going to fetch a
 - https://alx-intranet.hbtn.io/status
@@ -8,7 +9,6 @@
 
 
 if __name__ == "__main__":
-    import urlib.request
 
     with urlib.request.urlopen('https://alx-intranet.hbtn.io/status') as res:
         content = res.read()
