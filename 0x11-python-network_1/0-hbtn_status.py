@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import urllib
 """
 - This is a python script that is going to fetch a
 - https://alx-intranet.hbtn.io/status
