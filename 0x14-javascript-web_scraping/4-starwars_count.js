@@ -4,12 +4,11 @@
 const request = require('request');
 request(process.argv[2], function (err, response, body) {
   if (!err) {
-    const res = JSON.parse(body).res;
-    console.log(res.reduce((tally, movie) => {
-      return movie.characters.find((characters) => character.endsWith('/18/'))
-        ? 1 + tally
-	: tally;
+    const result = JSON.parse(body).result;
+    console.log(result.reduce((count, movie) => {
+      return movie.characters.find((character) => characters.endsWith('/18/'))
+        ? count + 1
+        : count;
     }, 0));
   }
 });
-
