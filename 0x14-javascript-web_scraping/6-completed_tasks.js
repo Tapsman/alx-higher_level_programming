@@ -4,9 +4,9 @@
 //
 const request = require('request');
 
-request.get(process.argv[2], { json: true }, (err, response, body) => {
-  if (err) {
-    console.log(err);
+request.get(process.argv[2], { json: true }, (error, response, body) => {
+  if (error) {
+    console.log(error);
     return;
   }
 
@@ -16,7 +16,7 @@ request.get(process.argv[2], { json: true }, (err, response, body) => {
       if (!tasksCompleted[todo.userId) {
         tasksCompleted[todo.userId] = 1;
       } else {
-        tasksCompleted[todo.userId] = tasksCompleted[todo.userId] + 1;
+        tasksCompleted[todo.userId] += 1;
       }
     }
   });
