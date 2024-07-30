@@ -1,6 +1,11 @@
 #!/usr/bin/node
 // This is a script that will get the content a webpage and stores in a file.
 
-const fs = require('fs');
 const request = require('request');
-request(process.argv[2].pipe(fs.createWriteStream(process.argv[3]));
+const fs = require('fs');
+const url = process.argv[2];
+const fleStream = fs.createWriteStream(process.argv[3]);
+
+request
+  .get(url)
+  .pipe(fileStream);
