@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Script that will compute the number of taskes completed
 // Where the first argument is API url
-//
+
 const request = require('request');
 
 request.get(process.argv[2], { json: true }, (error, response, body) => {
