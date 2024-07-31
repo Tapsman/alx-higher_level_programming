@@ -13,7 +13,7 @@ request.get(process.argv[2], { json: true }, (err, response, body) => {
   const tasksCompleted = {};
   body.forEach((todo) => {
     if (todo.completed) {
-      if (!tasksCompleted[todo.userId) {
+      if (!tasksCompleted[todo.userId]) {
         tasksCompleted[todo.userId] = 1;
       } else {
         tasksCompleted[todo.userId] += 1;
