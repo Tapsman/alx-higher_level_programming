@@ -5,16 +5,16 @@ const request = require('request');
 const id = process.argv[2];
 const url = 'https://swapi-api.alx-tools.com/api/films/${id}';
 
-request.get(url, (err, response, body) => {
-  if (err) {
-    console.log(err);
+request.get(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
   } else {
     const cont = JSON.parse(body);
     const characters = cont.characters;
     // The script will then print the characters.
     for (const character of characters) {
-      request.get(character, (err, response, body) => {
-        if (err) {
+      request.get(character, (error, response, body) => {
+        if (error) {
           console.log(error);
 	} else {
           const names = JSON.parse(body);
