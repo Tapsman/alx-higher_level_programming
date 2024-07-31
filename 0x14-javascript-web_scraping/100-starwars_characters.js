@@ -9,17 +9,17 @@ request.get(url, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
-    const cont = JSON.parse(body);
-    const characters = cont.characters;
+    const content = JSON.parse(body);
+    const characters = content.characters;
     // The script will then print the characters.
     for (const character of characters) {
       request.get(character, (error, response, body) => {
         if (error) {
           console.log(error);
-	} else {
+        } else {
           const names = JSON.parse(body);
-	  console.log(names.name);
-	}
+          console.log(names.name);
+        }
       });
     }
   }
