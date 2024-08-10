@@ -1,4 +1,6 @@
 #!/usr/bin/node
-/* This script is going to define a rectangle */
+// This is a script that defines a rectangle
 
-module.exports = class Rectangle { };
+class Rectangle {}
+
+module.exports = Rectangle;
